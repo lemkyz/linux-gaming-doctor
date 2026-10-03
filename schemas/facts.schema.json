@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.dev/schemas/facts.schema.json",
+  "title": "Linux Gaming Doctor P01 system facts report",
+  "type": "object",
+  "required": [
+    "schema_version", "phase", "read_only", "host", "session", "cpu",
+    "gpus", "graphics", "steam", "filesystems", "audio", "input",
+    "security", "power", "privacy"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "phase": {"const": "P01"},
+    "read_only": {"const": true},
+    "host": {"type": "object"},
+    "session": {"type": "object"},
+    "cpu": {"type": "object"},
+    "gpus": {"type": "array"},
+    "graphics": {"type": "object"},
+    "steam": {"type": "object"},
+    "filesystems": {"type": "object"},
+    "audio": {"type": "object"},
+    "input": {"type": "object"},
+    "security": {"type": "object"},
+    "power": {"type": "object"},
+    "privacy": {
+      "type": "object",
+      "required": [
+        "hostname_collected", "serials_collected",
+        "network_identifiers_collected", "user_paths_emitted"
+      ],
+      "properties": {
+        "hostname_collected": {"const": false},
+        "serials_collected": {"const": false},
+        "network_identifiers_collected": {"const": false},
+        "user_paths_emitted": {"const": false}
+      }
+    }
+  }
+}

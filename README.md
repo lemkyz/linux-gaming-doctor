@@ -55,3 +55,16 @@ Validate the repository with:
 python3 tools/validate_corpus.py
 python3 -m unittest discover -s tests -v
 ```
+
+## P01 — System Facts Engine
+
+The first executable collector is deliberately read-only:
+
+```bash
+./bin/gaming-doctor facts
+./bin/gaming-doctor facts --json
+```
+
+It inventories host/session/CPU/GPU/Vulkan/Steam/filesystem/audio/input/security/power state without collecting hostname, username, hardware serials, network identifiers or the user's home path.
+
+P01 is a **facts layer**, not a diagnosis layer. Later phases consume these observations before deciding whether a fault condition actually exists.
