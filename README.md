@@ -96,3 +96,17 @@ It distinguishes native Steam from the Steam Flatpak, inventories sandbox capabi
 filesystem paths or environment values, checks configured external-library visibility, and correlates
 an NVIDIA host driver with the Flatpak GL/GL32 runtime extensions that must match it. P03 never changes
 Flatpak overrides, installs runtimes or rewrites Steam configuration.
+
+## P04 — GPU + Vulkan diagnostic map
+
+P04 adds the read-only GPU/Vulkan boundary view:
+
+```bash
+./bin/gaming-doctor gpu
+./bin/gaming-doctor gpu --json
+```
+
+It distinguishes PCI/kernel-driver health from Vulkan enumeration, DRM render-node access, Fedora/RPM
+32-bit Vulkan readiness and the NVIDIA kernel/userspace version boundary. On hybrid systems it also
+records whether `switcherooctl` can see the GPU topology. No driver, package, PRIME/offload or Vulkan
+configuration is changed.

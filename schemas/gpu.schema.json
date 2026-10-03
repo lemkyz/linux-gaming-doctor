@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/gpu.schema.json",
+  "title": "Linux Gaming Doctor P04 GPU + Vulkan Report",
+  "type": "object",
+  "required": ["schema_version", "phase", "read_only", "gpu", "vulkan", "nvidia", "switcheroo", "finding_count", "findings", "privacy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "phase": {"const": "P04"},
+    "read_only": {"const": true},
+    "gpu": {
+      "type": "object",
+      "required": ["device_count", "devices", "vendor_set", "render_node_count", "readable_render_node_count", "hybrid_gpu"]
+    },
+    "vulkan": {
+      "type": "object",
+      "required": ["tool_present", "probe_status", "device_count", "devices", "icd_count", "icds", "compat32"]
+    },
+    "nvidia": {
+      "type": "object",
+      "required": ["present", "module_version", "smi_tool_present", "smi_status", "device_count", "devices", "userspace_driver_version", "kernel_userspace_version_match"]
+    },
+    "switcheroo": {
+      "type": "object",
+      "required": ["tool_present", "status", "device_count", "default_count"]
+    },
+    "privacy": {
+      "type": "object",
+      "required": ["absolute_paths_emitted", "environment_values_collected", "device_serials_collected", "network_identifiers_collected", "tokens_collected"]
+    }
+  }
+}
