@@ -4,19 +4,23 @@ import argparse
 import json
 
 from . import __version__
-from .facts import collect_facts, render_text
+from .facts import collect_facts, render_text as render_facts_text
+from .steam import collect_steam_state, render_text as render_steam_text
 
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="gaming-doctor",
-        description="Evidence-driven Linux gaming diagnostics. P01 is read-only.",
+        description="Evidence-driven Linux gaming diagnostics. P02 remains read-only.",
     )
-    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P01)")
+    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P02)")
     sub = p.add_subparsers(dest="command")
 
     facts = sub.add_parser("facts", help="Collect the read-only system gaming baseline")
     facts.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
+
+    steam = sub.add_parser("steam", help="Inspect Steam libraries, Proton tools and prefixes")
+    steam.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
     return p
 
 
@@ -31,7 +35,14 @@ def main() -> int:
         if args.json:
             print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")))
         else:
-            print(render_text(report), end="")
+            print(render_facts_text(report), end="")
+        return 0
+    if args.command == "steam":
+        report = collect_steam_state()
+        if args.json:
+            print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")))
+        else:
+            print(render_steam_text(report), end="")
         return 0
     p.error("unsupported command")
     return 2

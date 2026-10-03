@@ -68,3 +68,17 @@ The first executable collector is deliberately read-only:
 It inventories host/session/CPU/GPU/Vulkan/Steam/filesystem/audio/input/security/power state without collecting hostname, username, hardware serials, network identifiers or the user's home path.
 
 P01 is a **facts layer**, not a diagnosis layer. Later phases consume these observations before deciding whether a fault condition actually exists.
+
+## P02 — Steam + Proton health map
+
+P02 adds a read-only compatibility-stack view:
+
+```bash
+./bin/gaming-doctor steam
+./bin/gaming-doctor steam --json
+```
+
+It discovers Steam installations/libraries, installed app manifests, Proton/custom compatibility tools,
+compatibility-tool selection, compatdata/prefix integrity and filesystem risk boundaries. It never
+silently deletes a prefix or switches Proton versions. P02 only creates evidence for later differential
+tests and transactional repairs.

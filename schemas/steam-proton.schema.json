@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.dev/schemas/steam-proton.schema.json",
+  "title": "Linux Gaming Doctor P02 Steam and Proton discovery report",
+  "type": "object",
+  "required": ["schema_version", "phase", "read_only", "steam", "privacy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "phase": {"const": "P02"},
+    "read_only": {"const": true},
+    "steam": {
+      "type": "object",
+      "required": [
+        "installation_count", "installations", "library_count", "libraries",
+        "app_count", "apps", "compat_tool_count", "compat_tools",
+        "compatdata_count", "orphan_compatdata_count", "default_compat_tools",
+        "shared_windows_filesystem_library_count", "finding_count", "findings"
+      ]
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "absolute_paths_emitted", "account_identifiers_collected",
+        "tokens_collected", "network_identifiers_collected"
+      ],
+      "properties": {
+        "absolute_paths_emitted": {"const": false},
+        "account_identifiers_collected": {"const": false},
+        "tokens_collected": {"const": false},
+        "network_identifiers_collected": {"const": false}
+      }
+    }
+  }
+}
