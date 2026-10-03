@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/packaging.schema.json",
+  "title": "Linux Gaming Doctor P03 Packaging Report",
+  "type": "object",
+  "required": ["schema_version", "phase", "read_only", "packaging", "privacy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "phase": {"const": "P03"},
+    "read_only": {"const": true},
+    "packaging": {
+      "type": "object",
+      "required": [
+        "host_package_system", "native_steam", "flatpak_cli_present",
+        "flatpak_steam_installation_count", "flatpak_steam_installations",
+        "flatpak_external_library_count", "flatpak_undeclared_external_library_count",
+        "host_nvidia_version", "flatpak_nvidia_gl_runtime", "flatpak_nvidia_gl32_runtime",
+        "finding_count", "findings"
+      ]
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "absolute_paths_emitted", "flatpak_filesystem_paths_emitted",
+        "environment_values_collected", "account_identifiers_collected", "tokens_collected"
+      ]
+    }
+  }
+}

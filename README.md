@@ -82,3 +82,17 @@ It discovers Steam installations/libraries, installed app manifests, Proton/cust
 compatibility-tool selection, compatdata/prefix integrity and filesystem risk boundaries. It never
 silently deletes a prefix or switches Proton versions. P02 only creates evidence for later differential
 tests and transactional repairs.
+
+## P03 — Packaging + Flatpak boundary map
+
+P03 adds a read-only packaging/sandbox view:
+
+```bash
+./bin/gaming-doctor packaging
+./bin/gaming-doctor packaging --json
+```
+
+It distinguishes native Steam from the Steam Flatpak, inventories sandbox capabilities without leaking
+filesystem paths or environment values, checks configured external-library visibility, and correlates
+an NVIDIA host driver with the Flatpak GL/GL32 runtime extensions that must match it. P03 never changes
+Flatpak overrides, installs runtimes or rewrites Steam configuration.
