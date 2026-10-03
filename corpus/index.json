@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "corpus_name": "LGD Canonical Complaint Corpus",
+  "case_count": 100,
+  "status": "P00_FROZEN",
+  "cases_path": "corpus/cases"
+}

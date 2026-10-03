@@ -1,0 +1,20 @@
+{
+  "id": "LGD-0032",
+  "title": "Changing in-game resolution does not switch physical display mode",
+  "category": "display_wayland",
+  "symptom": "Gamescope scales image instead of mode switching",
+  "classification": "UNKNOWN",
+  "evidence_status": "UNCONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_game_resolution",
+    "capture_physical_mode"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "behavior_documented"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

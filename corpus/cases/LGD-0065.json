@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0065",
+  "title": "Switching native Steam to Flatpak leaves broken Steam symlink topology",
+  "category": "packaging_flatpak",
+  "symptom": "Legacy/native paths are missing or stale",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "steam_symlink_topology",
+    "flatpak_steam_paths"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "expected_paths_resolve"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

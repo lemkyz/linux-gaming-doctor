@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0002",
+  "title": "New Proton build breaks a previously working game",
+  "category": "launch_proton",
+  "symptom": "Regression appears only on newer Proton runtime",
+  "classification": "WORKAROUND",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "fingerprint_proton",
+    "run_known_good_proton_ab"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "known_good_passes",
+    "current_fails"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

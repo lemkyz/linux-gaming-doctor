@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0073",
+  "title": "Xbox controller is not recognized by Flatpak Steam on Fedora",
+  "category": "input_controller",
+  "symptom": "VID/PID or udev/uaccess visibility is incomplete",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "controller_vid_pid",
+    "hidraw_state",
+    "udev_rule_state",
+    "sandbox_visibility"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "steam_input_detects_controller"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

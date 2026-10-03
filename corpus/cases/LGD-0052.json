@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0052",
+  "title": "Wayland Remote Play produces no video unless special capture path enabled",
+  "category": "streaming_capture",
+  "symptom": "Wayland host capture path is disabled or unavailable",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "session_type",
+    "remote_play_capture_mode",
+    "pipewire_capture_available"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "capture_flow_restored"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

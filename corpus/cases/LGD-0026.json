@@ -1,0 +1,20 @@
+{
+  "id": "LGD-0026",
+  "title": "GNOME HDR exists but Gamescope HDR will not enable",
+  "category": "display_wayland",
+  "symptom": "Advertised protocol capability set is insufficient for Gamescope",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "compositor_protocols",
+    "gamescope_requirements"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "capability_gap_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

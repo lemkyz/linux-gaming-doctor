@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0021",
+  "title": "Shader processing repeats every launch",
+  "category": "performance",
+  "symptom": "Pipeline/shader cache persistence is failing",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "trace_shader_cache_path",
+    "check_cache_permissions",
+    "compare_cache_hashes"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "second_launch_reuses_cache"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0046",
+  "title": "Game always opens on wrong monitor",
+  "category": "display_wayland",
+  "symptom": "Window placement policy ignores desired per-game display",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "enumerate_outputs",
+    "capture_spawn_output",
+    "compositor_rule_capability"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "game_spawns_on_target_output"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

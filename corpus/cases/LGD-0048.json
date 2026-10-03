@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0048",
+  "title": "Remote Play video and input coordinates diverge with fractional scaling",
+  "category": "streaming_capture",
+  "symptom": "Scaling causes capture/input coordinate mismatch",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "per_output_scale",
+    "capture_coordinates",
+    "input_coordinates",
+    "scale_100_ab"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "100_percent_scale_restores_alignment"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

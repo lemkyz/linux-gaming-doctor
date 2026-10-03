@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0044",
+  "title": "Opening Steam overlay tanks FPS",
+  "category": "performance",
+  "symptom": "Overlay rendering path causes hitch/stutter",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "frametime_overlay_off",
+    "frametime_overlay_on"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "overlay_correlation_proven"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

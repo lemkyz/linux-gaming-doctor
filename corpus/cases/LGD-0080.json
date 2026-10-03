@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0080",
+  "title": "Very low PipeWire latency causes crackling during gaming",
+  "category": "audio",
+  "symptom": "Quantum/latency is below stable device/runtime threshold",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_quantum",
+    "capture_xruns",
+    "latency_ab"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "higher_latency_removes_crackling"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

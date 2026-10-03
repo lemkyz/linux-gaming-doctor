@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0083",
+  "title": "Unlock with Proton game running freezes desktop responsiveness",
+  "category": "power_suspend",
+  "symptom": "Steam CEF/GPU process stalls after unlock",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "unlock_timestamp",
+    "cef_gpu_process_state",
+    "steam_mainloop_latency"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "unlock_to_stall_correlation"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

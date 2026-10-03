@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0045",
+  "title": "Steam radial menu makes game a slideshow",
+  "category": "performance",
+  "symptom": "Steam virtual menu overlay causes severe stutter",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "controller_independence_ab",
+    "radial_menu_ab",
+    "frametime_capture"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "menu_path_isolated"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

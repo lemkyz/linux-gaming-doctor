@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0081",
+  "title": "Non-Steam Heroic/Epic/GOG game streams audio but black video",
+  "category": "streaming_capture",
+  "symptom": "Steam capture/presentation path fails for non-Steam game",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "game_render_health",
+    "host_capture_health",
+    "client_video_state",
+    "overlay_ab"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "presentation_boundary_isolated"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

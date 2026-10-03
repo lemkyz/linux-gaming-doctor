@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0057",
+  "title": "REFramework makes RE Engine games crash while vanilla works",
+  "category": "mods",
+  "symptom": "Mod/runtime compatibility failure",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "vanilla_launch",
+    "modded_launch",
+    "runtime_arch",
+    "dinput_trace"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "vanilla_passes_modded_fails"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

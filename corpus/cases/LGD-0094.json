@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0094",
+  "title": "Switch Pro controller needs missing launcher/device rule",
+  "category": "input_controller",
+  "symptom": "Input device permissions/rules are incomplete",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "vid_pid",
+    "udev_rules",
+    "launcher_visibility"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "launcher_sees_controller"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0037",
+  "title": "HDR worked before KDE update then stopped",
+  "category": "display_wayland",
+  "symptom": "Compositor/Gamescope compatibility regression",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "last_known_good_diff",
+    "fingerprint_plasma",
+    "fingerprint_gamescope"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "version_boundary_identified"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

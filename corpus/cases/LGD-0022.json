@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0022",
+  "title": "Game is stuttery only during first traversal then becomes smooth",
+  "category": "performance",
+  "symptom": "Runtime shader compilation causes transient frametime spikes",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_frametime",
+    "capture_shader_activity",
+    "correlate_timeline"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "shader_spikes_correlate"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

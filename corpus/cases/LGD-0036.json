@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0036",
+  "title": "Game looks frozen for minutes then resumes",
+  "category": "performance",
+  "symptom": "Long stall is mistaken for crash",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "process_heartbeat",
+    "gpu_queue_activity",
+    "window_responsiveness"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "stall_not_crash_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

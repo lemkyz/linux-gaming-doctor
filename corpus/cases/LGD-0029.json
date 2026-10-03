@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0029",
+  "title": "DX12 path is much slower than expected",
+  "category": "performance",
+  "symptom": "Translation-layer path is bottleneck",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "dx11_dx12_ab",
+    "gpu_busy",
+    "cpu_busy",
+    "frametime_capture"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "translation_path_isolated"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

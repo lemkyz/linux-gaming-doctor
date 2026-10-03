@@ -1,0 +1,20 @@
+{
+  "id": "LGD-0099",
+  "title": "GTA V Enhanced multiplayer kicks Proton/Linux users",
+  "category": "anti_cheat_drm",
+  "symptom": "BattlEye support/policy prevents local repair",
+  "classification": "UNSUPPORTED_POLICY",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "local_health_scan",
+    "battleye_status"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "local_health_passes"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0090",
+  "title": "Heroic logs grow at extreme rate and fill disk",
+  "category": "launcher",
+  "symptom": "Runaway logging causes storage pressure",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "log_growth_rate",
+    "disk_free_space",
+    "process_log_owner"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "log_growth_bounded"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0016",
+  "title": "EAC splash appears then game closes with unusual prefix mode",
+  "category": "anti_cheat_drm",
+  "symptom": "Prefix/runtime configuration is incompatible with anti-cheat path",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "inspect_prefix_mode",
+    "capture_eac_launch",
+    "clean_prefix_ab"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "eac_reaches_game"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

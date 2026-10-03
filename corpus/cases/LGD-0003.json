@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0003",
+  "title": "Controller works in Steam but not native Wayland game",
+  "category": "input_controller",
+  "symptom": "Steam Input boundary does not reach game",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "evdev_visibility",
+    "steam_input_visibility",
+    "game_virtual_controller_visibility",
+    "xwayland_ab"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "boundary_isolated"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

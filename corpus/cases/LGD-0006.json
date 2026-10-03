@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0006",
+  "title": "Requested high refresh becomes very low virtual refresh",
+  "category": "display_wayland",
+  "symptom": "Gamescope exposes incorrect virtual mode",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "read_drm_modes",
+    "read_compositor_mode",
+    "read_gamescope_mode"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "virtual_refresh_mismatch_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0086",
+  "title": "Sleeping handheld wakes itself and heats inside bag",
+  "category": "power_suspend",
+  "symptom": "Unexpected wake leads to sustained load without airflow",
+  "classification": "UNKNOWN",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "wake_history",
+    "suspend_state",
+    "active_processes",
+    "thermal_history"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "unexpected_wake_captured"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

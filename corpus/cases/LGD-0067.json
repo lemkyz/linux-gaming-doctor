@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0067",
+  "title": "Proton prefix reports incompatible/invalid version",
+  "category": "launch_proton",
+  "symptom": "Prefix metadata and selected Proton runtime are incompatible",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "prefix_metadata",
+    "selected_proton_version",
+    "compatibility_check"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "prefix_opens_with_selected_runtime"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

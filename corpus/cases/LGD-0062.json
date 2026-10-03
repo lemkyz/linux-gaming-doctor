@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0062",
+  "title": "Flatpak Steam fails because 32-bit runtime is missing",
+  "category": "packaging_flatpak",
+  "symptom": "Required 32-bit runtime/library path is absent",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "probe_32bit_gl",
+    "probe_32bit_vulkan",
+    "probe_steam_runtime_32bit"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "steam_starts"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

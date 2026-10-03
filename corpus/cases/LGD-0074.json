@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0074",
+  "title": "Controller works in Steam UI but not games after firmware update",
+  "category": "input_controller",
+  "symptom": "Virtual controller/game path fails after firmware/client change",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "steam_ui_input",
+    "virtual_controller_state",
+    "game_input_state",
+    "firmware_version"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "ui_pass_game_fail_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

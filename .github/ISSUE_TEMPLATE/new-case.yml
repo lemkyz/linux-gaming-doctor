@@ -1,0 +1,41 @@
+name: New Linux gaming failure case
+description: Propose a reproducible case for the canonical corpus
+title: "[case] "
+labels: ["corpus"]
+body:
+  - type: textarea
+    id: symptom
+    attributes:
+      label: User-visible symptom
+      description: What does the user actually observe?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Distro, kernel, GPU/driver, session, launcher, runtime, packaging.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / upstream issue
+    validations:
+      required: true
+  - type: dropdown
+    id: evidence_status
+    attributes:
+      label: Evidence status
+      options:
+        - CONFIRMED
+        - REPORTED
+        - UNCONFIRMED
+    validations:
+      required: true

@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0047",
+  "title": "Remote Play image warps when cursor crosses rotated monitor",
+  "category": "streaming_capture",
+  "symptom": "Capture dimensions follow wrong monitor geometry",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "selected_capture_output",
+    "cursor_output",
+    "capture_dimensions"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "geometry_source_mismatch_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

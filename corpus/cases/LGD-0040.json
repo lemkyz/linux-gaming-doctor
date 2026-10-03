@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0040",
+  "title": "Launch options copied from forums conflict with current runtime",
+  "category": "performance",
+  "symptom": "Stale or inapplicable overrides degrade behavior",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "parse_launch_options",
+    "map_options_to_runtime",
+    "detect_conflicts"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "minimal_options_pass"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

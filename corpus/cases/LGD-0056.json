@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0056",
+  "title": "OpenGL games perform badly only in Wayland session",
+  "category": "performance",
+  "symptom": "Session/rendering interaction causes regression",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "opengl_wayland_benchmark",
+    "opengl_x11_benchmark"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "x11_or_xwayland_outperforms"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

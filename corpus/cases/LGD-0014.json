@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0014",
+  "title": "MangoHud itself causes worse frametime",
+  "category": "performance",
+  "symptom": "Monitoring overlay introduces regression",
+  "classification": "WORKAROUND",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "benchmark_overlay_off",
+    "benchmark_overlay_on",
+    "fingerprint_mangohud"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "overlay_off_improves_frametime"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

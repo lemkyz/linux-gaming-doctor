@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0063",
+  "title": "Steam Flatpak install path is unwritable or sandbox-invisible",
+  "category": "packaging_flatpak",
+  "symptom": "Chosen library path is outside allowed/writable scope",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "path_writable",
+    "flatpak_path_visibility"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "library_path_usable"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

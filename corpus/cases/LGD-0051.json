@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0051",
+  "title": "Remote Play works once then second session hangs",
+  "category": "streaming_capture",
+  "symptom": "Capture session teardown leaks state",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "portal_session_state",
+    "pipewire_node_state",
+    "teardown_timing"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "stale_session_removed"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

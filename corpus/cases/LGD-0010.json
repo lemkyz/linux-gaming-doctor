@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0010",
+  "title": "nvidia-smi works but Vulkan games fail",
+  "category": "gpu_vulkan",
+  "symptom": "Kernel driver works while Vulkan ICD/loader path is broken",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "nvidia_smi",
+    "vulkan_loader",
+    "enumerate_icds",
+    "probe_32bit_vulkan"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "vulkan_probe_passes"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

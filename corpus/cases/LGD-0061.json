@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0061",
+  "title": "Flatpak Steam update breaks native Linux games in container runtime",
+  "category": "packaging_flatpak",
+  "symptom": "Container runtime regression",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "host_binary_ab",
+    "container_binary_ab",
+    "runtime_linker_state"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "host_passes_container_fails"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

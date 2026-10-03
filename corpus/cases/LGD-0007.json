@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0007",
+  "title": "Steam overlay is huge or clipped under fractional scaling",
+  "category": "display_wayland",
+  "symptom": "Physical framebuffer and logical scaling disagree",
+  "classification": "WORKAROUND",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "read_logical_scale",
+    "read_physical_resolution",
+    "read_xwayland_scale"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "overlay_scale_normalized"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

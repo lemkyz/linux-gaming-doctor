@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0076",
+  "title": "Steam Input dies after hours until reboot",
+  "category": "input_controller",
+  "symptom": "Long-lived input state becomes stale",
+  "classification": "UNKNOWN",
+  "evidence_status": "UNCONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "monitor_input_devices",
+    "steam_input_state_history",
+    "uinput_state_history"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "stale_state_captured"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

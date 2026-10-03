@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0089",
+  "title": "Native Linux sideloaded game is unnecessarily launched through compatibility layer",
+  "category": "launcher",
+  "symptom": "Executable type detection is wrong or overridden",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "detect_elf_native",
+    "detect_compat_layer",
+    "native_ab"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "native_launch_passes"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

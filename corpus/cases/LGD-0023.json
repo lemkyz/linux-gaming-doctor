@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0023",
+  "title": "Desktop HDR works but Gamescope HDR disappears",
+  "category": "display_wayland",
+  "symptom": "Compositor/Gamescope HDR capability boundary regressed",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "desktop_hdr_capability",
+    "gamescope_hdr_capability",
+    "protocol_capabilities"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "capability_boundary_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

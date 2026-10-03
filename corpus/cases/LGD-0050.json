@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0050",
+  "title": "Remote Play inserts stale or wrong frames",
+  "category": "streaming_capture",
+  "symptom": "Steam capture path is wrong while PipeWire works elsewhere",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "steam_capture_frames",
+    "pipewire_baseline_capture",
+    "compare_frame_sequence"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "steam_only_failure_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

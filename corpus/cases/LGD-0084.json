@@ -1,0 +1,25 @@
+{
+  "id": "LGD-0084",
+  "title": "Resume on battery causes severe temporary FPS drop",
+  "category": "power_suspend",
+  "symptom": "Power profile or clock state is wrong immediately after resume",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "ac_state",
+    "power_profile",
+    "cpu_clocks",
+    "gpu_clocks",
+    "fps_timeline"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "power_state_correlation"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

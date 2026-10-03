@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0087",
+  "title": "Heroic selected default runner differs from runner actually executed",
+  "category": "launcher",
+  "symptom": "Launcher metadata and actual runner diverge",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "heroic_selected_runner",
+    "trace_executed_runner",
+    "runner_hash"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "selected_equals_executed"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

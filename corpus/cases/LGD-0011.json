@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0011",
+  "title": "Powerful NVIDIA laptop runs game on wrong GPU",
+  "category": "gpu_vulkan",
+  "symptom": "Game renders on integrated GPU",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "map_process_to_gpu",
+    "read_vulkan_renderer",
+    "read_pci_gpu_inventory"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "game_uses_target_gpu"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0068",
+  "title": "Steam Game Recording succeeds but export fails",
+  "category": "packaging_flatpak",
+  "symptom": "Capture/encode succeeds but destination write boundary fails",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "recording_exists",
+    "encode_success",
+    "export_path_permissions"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "export_file_written"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

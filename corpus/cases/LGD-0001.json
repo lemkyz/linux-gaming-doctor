@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0001",
+  "title": "Play returns to Play immediately",
+  "category": "launch_proton",
+  "symptom": "Game launch terminates before first visible window",
+  "classification": "WORKAROUND",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "detect_game_process",
+    "inspect_proton_log",
+    "inspect_prefix_health",
+    "inspect_filesystem"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "game_reaches_first_visible_window"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

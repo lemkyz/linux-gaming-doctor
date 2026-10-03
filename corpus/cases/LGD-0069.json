@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0069",
+  "title": "Game audio randomly cuts out in Flatpak Steam",
+  "category": "audio",
+  "symptom": "Audio failure occurs inside sandbox/runtime or stream path",
+  "classification": "UNKNOWN",
+  "evidence_status": "UNCONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_stream_lifetime",
+    "sandbox_audio_permissions",
+    "sample_flow"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "failure_boundary_captured"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0064",
+  "title": "Steam Flatpak will not start until background permission is granted",
+  "category": "packaging_flatpak",
+  "symptom": "Sandbox permission prevents required background behavior",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "flatpak_permissions",
+    "steam_startup_trace"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "steam_starts_with_minimal_permission"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0028",
+  "title": "Frame Generation causes multi-minute freezes",
+  "category": "performance",
+  "symptom": "FG path introduces long stall",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "native_ab",
+    "upscaler_ab",
+    "framegen_ab",
+    "process_heartbeat"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "stall_only_with_framegen"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

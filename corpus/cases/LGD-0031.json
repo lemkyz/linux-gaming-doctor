@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0031",
+  "title": "Game sees wrong refresh despite correct desktop refresh",
+  "category": "display_wayland",
+  "symptom": "Refresh differs across physical/compositor/Gamescope/game layers",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "read_drm_modes",
+    "read_compositor_mode",
+    "read_gamescope_mode",
+    "capture_game_mode"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "failing_layer_identified"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

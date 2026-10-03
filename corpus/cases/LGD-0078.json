@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0078",
+  "title": "Steam voice chat stays connecting with virtual sinks/loopbacks",
+  "category": "audio",
+  "symptom": "Virtual audio graph prevents expected voice path",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "default_source",
+    "default_sink",
+    "virtual_nodes",
+    "steam_voice_stream"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "voice_stream_connects"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

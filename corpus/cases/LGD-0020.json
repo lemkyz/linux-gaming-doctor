@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0020",
+  "title": "Global gaming environment variables degrade unrelated apps",
+  "category": "performance",
+  "symptom": "Optimization variables leak outside game process tree",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "enumerate_global_env",
+    "trace_process_env"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "variables_scoped_to_game_only"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

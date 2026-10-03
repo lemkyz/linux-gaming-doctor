@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0091",
+  "title": "Game process exists but no window ever appears",
+  "category": "launcher",
+  "symptom": "Launcher treats process start as success before graphics/window init",
+  "classification": "UNKNOWN",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "process_alive",
+    "graphics_init_state",
+    "first_surface",
+    "first_visible_window"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "failure_stage_identified"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

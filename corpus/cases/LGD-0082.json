@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0082",
+  "title": "Suspend/resume makes Proton games unusable while native apps remain fine",
+  "category": "power_suspend",
+  "symptom": "GPU/runtime state after resume is invalid for Proton path",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "vulkan_state_before_sleep",
+    "vulkan_state_after_resume",
+    "native_app_health",
+    "proton_game_health"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "resume_boundary_isolated"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0024",
+  "title": "HDR makes SDR UI oversaturated",
+  "category": "display_wayland",
+  "symptom": "SDR-to-HDR composition path is incorrect",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_hdr_state",
+    "capture_sdr_ui_path",
+    "compare_color_pipeline"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "game_hdr_and_sdr_ui_diverge"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

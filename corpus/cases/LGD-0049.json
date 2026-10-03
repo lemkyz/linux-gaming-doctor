@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0049",
+  "title": "Wayland Remote Play has audio but black or frozen video",
+  "category": "streaming_capture",
+  "symptom": "Wayland capture path fails while stream/session exists",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "audio_stream_health",
+    "video_frame_flow",
+    "x11_wayland_ab"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "x11_passes_wayland_fails"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

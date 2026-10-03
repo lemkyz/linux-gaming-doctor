@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0019",
+  "title": "Non-Steam Wayland app lacks overlay and some Steam Input features",
+  "category": "steam_client",
+  "symptom": "Steam native Wayland integration boundary is incomplete",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "steam_overlay_state",
+    "steam_input_state",
+    "wayland_native_state",
+    "xwayland_ab"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "xwayland_path_differs"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

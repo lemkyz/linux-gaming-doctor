@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0035",
+  "title": "HDR path produces black screen while audio continues",
+  "category": "display_wayland",
+  "symptom": "Game remains alive but visible surface path fails",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "game_process_alive",
+    "audio_active",
+    "surface_exists",
+    "compositor_visibility"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "surface_boundary_isolated"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

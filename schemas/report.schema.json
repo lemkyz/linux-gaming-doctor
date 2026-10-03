@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.dev/schemas/report.schema.json",
+  "title": "Linux Gaming Doctor diagnostic report",
+  "type": "object",
+  "required": ["schema_version", "timestamp", "facts", "findings", "privacy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "timestamp": {"type": "string"},
+    "facts": {"type": "object"},
+    "findings": {"type": "array"},
+    "privacy": {
+      "type": "object",
+      "required": ["scrubbed"],
+      "properties": {"scrubbed": {"const": true}},
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

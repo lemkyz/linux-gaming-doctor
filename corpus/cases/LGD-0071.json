@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0071",
+  "title": "Flatpak Steam cannot update controller firmware",
+  "category": "input_controller",
+  "symptom": "Sandbox/device permissions block firmware updater",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "usb_device_visibility",
+    "hidraw_visibility",
+    "firmware_updater_trace"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "firmware_updater_reaches_device"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

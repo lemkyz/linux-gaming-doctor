@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0072",
+  "title": "Controller is visible to Linux but not Flatpak Steam",
+  "category": "input_controller",
+  "symptom": "Device metadata/udev boundary is hidden from sandbox",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "kernel_input_visibility",
+    "udev_metadata_visibility",
+    "flatpak_device_visibility",
+    "steam_input_visibility"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "steam_sees_controller"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

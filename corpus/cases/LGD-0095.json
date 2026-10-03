@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0095",
+  "title": "EA App works briefly then returns to connecting and closes",
+  "category": "launcher",
+  "symptom": "Launcher prefix/updater state degrades over time",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "ea_executable_exists",
+    "prefix_health",
+    "updater_state",
+    "clean_prefix_ab"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "clean_prefix_control_launches"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

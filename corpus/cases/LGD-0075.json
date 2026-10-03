@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0075",
+  "title": "KDE controller-as-pointer feature conflicts with Steam Input",
+  "category": "input_controller",
+  "symptom": "Two input translation layers interfere",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "kde_gamecontroller_mapping",
+    "steam_input_mapping",
+    "duplicate_events"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "single_translation_layer_remains"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

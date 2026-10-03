@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0085",
+  "title": "Steam client increases laptop idle battery drain",
+  "category": "power_suspend",
+  "symptom": "Background wakeups/webhelper activity consume power",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "process_wakeups",
+    "steamwebhelper_cpu",
+    "package_power"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "idle_power_improves"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

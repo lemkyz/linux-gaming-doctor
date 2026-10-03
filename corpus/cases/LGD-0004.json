@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0004",
+  "title": "Bluetooth controller disappears after reconnect inside Gamescope",
+  "category": "input_controller",
+  "symptom": "Reconnect creates input device that Gamescope fails to reacquire",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "watch_evdev_hotplug",
+    "gamescope_input_visibility"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "kernel_sees_device",
+    "gamescope_misses_device"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0027",
+  "title": "DLSS Frame Generation option missing on Linux",
+  "category": "gpu_vulkan",
+  "symptom": "Required runtime capability query is absent or incomplete",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "gpu_feature_support",
+    "nvapi_state",
+    "streamline_state",
+    "capability_query_trace"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "capability_gap_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

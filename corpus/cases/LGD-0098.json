@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0098",
+  "title": "REFramework crashes RE Engine games on ARM64 Proton while vanilla is healthy",
+  "category": "mods",
+  "symptom": "ARM64 mod/runtime input compatibility failure",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "architecture",
+    "vanilla_launch",
+    "modded_launch",
+    "dinput_trace"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "mod_boundary_isolated"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

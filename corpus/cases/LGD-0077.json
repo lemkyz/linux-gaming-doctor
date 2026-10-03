@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0077",
+  "title": "Steam startup hangs while probing broken PipeWire configuration",
+  "category": "steam_client",
+  "symptom": "Steam waits on audio control path",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "steam_startup_timeline",
+    "wpctl_latency",
+    "pipewire_config_health"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "startup_latency_normalized"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

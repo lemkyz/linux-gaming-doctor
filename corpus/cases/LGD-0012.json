@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0012",
+  "title": "Game audio stream exists but produces no samples",
+  "category": "audio",
+  "symptom": "Failure is inside game/runtime audio path, not host routing",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "pipewire_stream_exists",
+    "pipewire_sample_flow",
+    "sink_routing"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "zero_sample_boundary_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

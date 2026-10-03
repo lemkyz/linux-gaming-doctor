@@ -1,0 +1,25 @@
+{
+  "id": "LGD-0009",
+  "title": "NVIDIA install causes black screen after reboot",
+  "category": "gpu_vulkan",
+  "symptom": "Kernel module signing or load state is invalid",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "secure_boot_state",
+    "nvidia_module_state",
+    "akmods_state",
+    "module_signature_state"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "module_loads",
+    "graphical_session_starts"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

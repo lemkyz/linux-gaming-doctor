@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0033",
+  "title": "VRR causes flicker near low frame rates",
+  "category": "display_wayland",
+  "symptom": "Frame pacing crosses VRR/LFC boundary",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_fps",
+    "read_vrr_range",
+    "detect_lfc_transitions"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "flicker_correlates_with_boundary"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

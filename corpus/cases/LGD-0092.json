@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0092",
+  "title": "UMU/runner wrapper is written into executable slot and game never launches",
+  "category": "launcher",
+  "symptom": "Launcher configuration semantics are invalid",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "configured_executable",
+    "expected_game_binary",
+    "runner_wrapper_state"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "game_binary_executes"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

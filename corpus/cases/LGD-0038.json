@@ -1,0 +1,20 @@
+{
+  "id": "LGD-0038",
+  "title": "HDR game looks correct but Steam UI colors are wrong",
+  "category": "display_wayland",
+  "symptom": "Game HDR and SDR UI composition paths diverge",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "capture_game_hdr",
+    "capture_ui_sdr_conversion"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "paths_diverge"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

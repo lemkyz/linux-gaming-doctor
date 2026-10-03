@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0015",
+  "title": "Hybrid GPU cache works once then crashes later",
+  "category": "gpu_vulkan",
+  "symptom": "Cache generated for one GPU is reused by another GPU",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "fingerprint_cache_device",
+    "fingerprint_active_gpu",
+    "cache_ab"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "cache_regeneration_restores_launch"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

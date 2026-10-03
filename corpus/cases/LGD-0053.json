@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0053",
+  "title": "HDR preference set for one game leaks globally",
+  "category": "display_wayland",
+  "symptom": "Per-game preference is not persisted independently",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "profile_hdr_state",
+    "global_hdr_state",
+    "per_game_hdr_state"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "state_leak_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

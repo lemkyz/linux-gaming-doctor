@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0066",
+  "title": "Flatpak Steam cannot access installed NVIDIA driver stack",
+  "category": "packaging_flatpak",
+  "symptom": "Host and Flatpak graphics runtime versions mismatch",
+  "classification": "REPAIRABLE",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "host_nvidia_version",
+    "flatpak_gl_extension_version",
+    "vulkan_in_sandbox"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "sandbox_gpu_probe_passes"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

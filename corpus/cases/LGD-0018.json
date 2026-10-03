@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0018",
+  "title": "Anti-cheat module verification fails while game rendering is healthy",
+  "category": "anti_cheat_drm",
+  "symptom": "Anti-cheat boundary fails independently of game renderer",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "game_render_health",
+    "anti_cheat_module_status",
+    "heartbeat_status"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "boundary_isolated"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

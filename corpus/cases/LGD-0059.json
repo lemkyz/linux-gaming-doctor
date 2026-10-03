@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0059",
+  "title": "Some games on NTFS work while others fail",
+  "category": "storage_filesystem",
+  "symptom": "Prefix/filesystem semantics conflict with Proton expectations",
+  "classification": "WORKAROUND",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "game_fs_type",
+    "compatdata_fs_type",
+    "symlink_test",
+    "mount_options"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "native_fs_prefix_passes"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

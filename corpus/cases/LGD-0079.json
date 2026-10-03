@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0079",
+  "title": "Pause/resume makes audio robotic or bitty",
+  "category": "audio",
+  "symptom": "Audio graph state changes across pause/resume",
+  "classification": "UNKNOWN",
+  "evidence_status": "UNCONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "snapshot_audio_graph_before",
+    "snapshot_audio_graph_after",
+    "capture_quantum_rate"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "state_delta_captured"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

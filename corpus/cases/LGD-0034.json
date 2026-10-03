@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0034",
+  "title": "VRR option missing despite VRR-capable monitor",
+  "category": "display_wayland",
+  "symptom": "Capability disappears between EDID/DRM/compositor/Gamescope",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "read_edid_vrr",
+    "read_drm_vrr",
+    "read_compositor_vrr",
+    "read_gamescope_vrr"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "failing_capability_hop_identified"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

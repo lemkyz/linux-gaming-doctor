@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0013",
+  "title": "Audio disappears before game crash",
+  "category": "audio",
+  "symptom": "Audio subsystem deadlock precedes crash",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "timestamp_audio_loss",
+    "capture_thread_stall",
+    "capture_crash_time"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "temporal_correlation_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

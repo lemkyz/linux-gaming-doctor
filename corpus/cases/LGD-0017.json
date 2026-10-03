@@ -1,0 +1,20 @@
+{
+  "id": "LGD-0017",
+  "title": "GTA Online kicks Linux/Proton player despite healthy install",
+  "category": "anti_cheat_drm",
+  "symptom": "BattlEye policy/support blocks multiplayer",
+  "classification": "UNSUPPORTED_POLICY",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "local_health_scan",
+    "anti_cheat_support_status"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "local_stack_healthy"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

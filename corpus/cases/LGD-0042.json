@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0042",
+  "title": "Steam Controller trackpad stops moving cursor when Steam opens",
+  "category": "input_controller",
+  "symptom": "Steam grabs controller but virtual mouse creation fails",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "hidraw_state",
+    "uinput_state",
+    "steam_registration",
+    "virtual_mouse_state"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "grab_without_virtual_device_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

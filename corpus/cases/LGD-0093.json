@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0093",
+  "title": "Heroic update allegedly damages game folder structure",
+  "category": "launcher",
+  "symptom": "Reported destructive update behavior lacks confirmed root cause",
+  "classification": "UNKNOWN",
+  "evidence_status": "UNCONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "directory_manifest_before",
+    "directory_manifest_after",
+    "update_event_trace"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "filesystem_delta_captured"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

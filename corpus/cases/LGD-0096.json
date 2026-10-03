@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0096",
+  "title": "Ubisoft installer says complete but expected executable is absent",
+  "category": "launcher",
+  "symptom": "Installer success message is false positive",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "installer_exit_status",
+    "expected_artifact_exists",
+    "prefix_file_manifest"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "expected_executable_exists"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

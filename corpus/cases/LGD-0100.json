@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0100",
+  "title": "Controller works but battery/charging status is absent from normal Linux power interface",
+  "category": "input_controller",
+  "symptom": "Peripheral capability reporting is incomplete",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "input_device_state",
+    "power_supply_entries",
+    "controller_transport"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "input_present_power_status_absent"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

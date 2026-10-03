@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0025",
+  "title": "HDR gradients band badly under color management",
+  "category": "display_wayland",
+  "symptom": "Color management path introduces visible banding",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "color_management_ab",
+    "capture_hdr_pipeline_state"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "banding_changes_with_path"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

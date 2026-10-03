@@ -1,0 +1,24 @@
+{
+  "id": "LGD-0039",
+  "title": "User cannot tell whether DLSS, FSR or Frame Generation causes instability",
+  "category": "performance",
+  "symptom": "Only one graphics-feature transition triggers the failure",
+  "classification": "WORKAROUND",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "native_ab",
+    "dlss_ab",
+    "fsr_ab",
+    "framegen_ab"
+  ],
+  "mutation_policy": "TEMPORARY_ONLY",
+  "verification": [
+    "failing_transition_identified"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

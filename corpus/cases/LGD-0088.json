@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0088",
+  "title": "Reinstalled Heroic game keeps stale old prefix path",
+  "category": "launcher",
+  "symptom": "Launcher metadata points at nonexistent/stale prefix",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "heroic_prefix_metadata",
+    "actual_prefix_paths"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "metadata_matches_existing_prefix"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

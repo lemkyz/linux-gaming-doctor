@@ -1,0 +1,20 @@
+{
+  "id": "LGD-0008",
+  "title": "4K display exposes only logical low resolution to game",
+  "category": "display_wayland",
+  "symptom": "Mode enumeration uses logical rather than physical modes",
+  "classification": "UPSTREAM_BUG",
+  "evidence_status": "CONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "read_edid_modes",
+    "capture_game_modes"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "enumeration_mismatch_proven"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

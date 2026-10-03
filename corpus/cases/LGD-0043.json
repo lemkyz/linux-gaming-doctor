@@ -1,0 +1,23 @@
+{
+  "id": "LGD-0043",
+  "title": "Controller stick moves desktop pointer while gaming",
+  "category": "input_controller",
+  "symptom": "Desktop mapping leaks into active game action set",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "steam_action_set",
+    "desktop_layout_state",
+    "game_focus_state"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "duplicate_mapping_removed"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

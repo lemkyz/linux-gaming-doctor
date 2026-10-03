@@ -1,0 +1,22 @@
+{
+  "id": "LGD-0070",
+  "title": "Game fails because Windows-visible install/prefix path is too long",
+  "category": "storage_filesystem",
+  "symptom": "Effective path exceeds application assumptions",
+  "classification": "REPAIRABLE",
+  "evidence_status": "REPORTED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "compute_windows_visible_path_length",
+    "inspect_launcher_path"
+  ],
+  "mutation_policy": "REVERSIBLE",
+  "verification": [
+    "shorter_path_launches"
+  ],
+  "rollback": [
+    "restore_pre_test_state"
+  ],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}

@@ -1,0 +1,21 @@
+{
+  "id": "LGD-0054",
+  "title": "Game/desktop transitions scramble multi-monitor settings",
+  "category": "display_wayland",
+  "symptom": "Output identity/state handling is unstable across sessions",
+  "classification": "UNKNOWN",
+  "evidence_status": "UNCONFIRMED",
+  "source_hint": "Canonical corpus seed; source URLs are attached during evidence-ingestion phases.",
+  "preconditions": [],
+  "probes": [
+    "fingerprint_outputs",
+    "snapshot_desktop_layout",
+    "snapshot_game_layout"
+  ],
+  "mutation_policy": "NONE",
+  "verification": [
+    "state_delta_captured"
+  ],
+  "rollback": [],
+  "notes": "P00 seed record. Do not promote REPORTED/UNCONFIRMED evidence to confirmed without source review and reproduction."
+}
