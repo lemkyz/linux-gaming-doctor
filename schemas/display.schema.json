@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/display.schema.json",
+  "title": "Linux Gaming Doctor P05 Display + Wayland Report",
+  "type": "object",
+  "required": ["schema_version", "phase", "read_only", "session", "compositor", "drm", "kscreen", "xrandr", "display", "gamescope", "finding_count", "findings", "privacy"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "phase": {"const": "P05"},
+    "read_only": {"const": true},
+    "session": {"type": "object", "required": ["type", "desktop", "wayland_socket_present", "x11_display_present", "xwayland_process_running"]},
+    "compositor": {"type": "object", "required": ["name", "version_status", "version", "session"]},
+    "drm": {"type": "object", "required": ["connector_count", "connected_count", "enabled_count", "connectors"]},
+    "display": {"type": "object", "required": ["source", "output_count", "active_count", "fractional_scale_count", "mixed_scale", "mixed_refresh", "hdr_state_known_count", "hdr_enabled_count", "vrr_state_known_count", "outputs"]},
+    "gamescope": {"type": "object", "required": ["tool_present", "version_status", "version"]},
+    "privacy": {"type": "object", "required": ["absolute_paths_emitted", "environment_values_collected", "edid_payload_collected", "display_serials_collected", "network_identifiers_collected", "tokens_collected"]}
+  }
+}

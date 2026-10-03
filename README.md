@@ -110,3 +110,17 @@ It distinguishes PCI/kernel-driver health from Vulkan enumeration, DRM render-no
 32-bit Vulkan readiness and the NVIDIA kernel/userspace version boundary. On hybrid systems it also
 records whether `switcherooctl` can see the GPU topology. No driver, package, PRIME/offload or Vulkan
 configuration is changed.
+
+## P05 — Display + Wayland diagnostic map
+
+P05 adds a read-only display/session view:
+
+```bash
+./bin/gaming-doctor display
+./bin/gaming-doctor display --json
+```
+
+It separates physical DRM connectors from compositor-level output state, recording current resolution,
+refresh, scaling/fractional scaling, HDR/VRR state when exposed, XWayland presence and Gamescope context.
+It intentionally does **not** treat fractional scaling, mixed refresh rates, HDR or VRR as faults by
+themselves. EDID payloads and display serials are never collected.
