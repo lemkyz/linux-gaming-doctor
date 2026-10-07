@@ -149,3 +149,16 @@ It records service/runtime health, sink/source availability, transport and sampl
 Bluetooth profile context, PipeWire clock/quantum settings, and aggregate recent xrun evidence.
 Endpoint names, Bluetooth addresses, device descriptions and raw journal lines are deliberately
 excluded from reports.
+
+## P08 — Input / controller diagnostic map
+
+P08 adds a read-only controller/input view:
+
+```bash
+./bin/gaming-doctor input
+./bin/gaming-doctor input --json
+```
+
+It classifies event devices without emitting human-readable device names, checks gamepad event-node
+access, hidraw and uinput boundaries, Steam-named udev rules, `/run/udev/data` availability and
+device-scope batteries. Vendor/product IDs remain available for compatibility-rule matching.

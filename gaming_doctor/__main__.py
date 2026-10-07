@@ -11,14 +11,15 @@ from .gpu import collect_gpu_state, render_text as render_gpu_text
 from .display import collect_display_state, render_text as render_display_text
 from .performance import collect_performance_state, render_text as render_performance_text
 from .audio import collect_audio_state, render_text as render_audio_text
+from .input import collect_input_state, render_text as render_input_text
 
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="gaming-doctor",
-        description="Evidence-driven Linux gaming diagnostics. P07 remains read-only.",
+        description="Evidence-driven Linux gaming diagnostics. P08 remains read-only.",
     )
-    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P07)")
+    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P08)")
     sub = p.add_subparsers(dest="command")
 
     facts = sub.add_parser("facts", help="Collect the read-only system gaming baseline")
@@ -56,6 +57,12 @@ def parser() -> argparse.ArgumentParser:
         help="Inspect PipeWire/WirePlumber, endpoints, Bluetooth profiles, clock settings and recent xrun evidence",
     )
     audio.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
+
+    input_parser = sub.add_parser(
+        "input",
+        help="Inspect gamepads, event/hidraw/uinput access, udev boundaries and device batteries",
+    )
+    input_parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
     return p
 
 
@@ -92,6 +99,10 @@ def main() -> int:
     if args.command == "audio":
         report = collect_audio_state()
         print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) if args.json else render_audio_text(report), end="\n" if args.json else "")
+        return 0
+    if args.command == "input":
+        report = collect_input_state()
+        print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) if args.json else render_input_text(report), end="\n" if args.json else "")
         return 0
     p.error("unsupported command")
     return 2
