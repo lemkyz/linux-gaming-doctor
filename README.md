@@ -124,3 +124,14 @@ It separates physical DRM connectors from compositor-level output state, recordi
 refresh, scaling/fractional scaling, HDR/VRR state when exposed, XWayland presence and Gamescope context.
 It intentionally does **not** treat fractional scaling, mixed refresh rates, HDR or VRR as faults by
 themselves. EDID payloads and display serials are never collected.
+
+## P06 — Performance diagnostic snapshot
+
+P06 adds a read-only performance-state view:
+
+```bash
+./bin/gaming-doctor performance
+./bin/gaming-doctor performance --json
+```
+
+It records CPU frequency policy, boost state, load, Linux PSI pressure, memory/swap pressure, thermal-zone snapshots, laptop power state, NVIDIA utilization/temperature/clocks/power telemetry, and GameMode/MangoHud availability. P06 treats one-time utilization, governors and temperatures as evidence context rather than proof of a bottleneck; later timeline and differential phases correlate these signals with actual game frametime.

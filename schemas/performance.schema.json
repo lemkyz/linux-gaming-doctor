@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/performance.schema.json",
+  "title": "Linux Gaming Doctor P06 Performance Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "phase",
+    "read_only",
+    "cpu",
+    "memory",
+    "pressure",
+    "thermal",
+    "nvidia",
+    "power",
+    "tools",
+    "finding_count",
+    "findings",
+    "privacy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "phase": {
+      "const": "P06"
+    },
+    "read_only": {
+      "const": true
+    },
+    "cpu": {
+      "type": "object",
+      "required": [
+        "logical_cpus",
+        "frequency",
+        "load"
+      ]
+    },
+    "memory": {
+      "type": "object",
+      "required": [
+        "total_kib",
+        "available_kib",
+        "available_pct",
+        "swap_total_kib",
+        "swap_used_kib",
+        "swap_used_pct"
+      ]
+    },
+    "pressure": {
+      "type": "object",
+      "required": [
+        "cpu",
+        "memory",
+        "io"
+      ]
+    },
+    "thermal": {
+      "type": "object",
+      "required": [
+        "zone_count",
+        "zones",
+        "max_temp_c",
+        "hottest_type"
+      ]
+    },
+    "nvidia": {
+      "type": "object",
+      "required": [
+        "tool_present",
+        "status",
+        "device_count",
+        "devices"
+      ]
+    },
+    "power": {
+      "type": "object",
+      "required": [
+        "profile",
+        "ac_state",
+        "battery_statuses"
+      ]
+    },
+    "tools": {
+      "type": "object",
+      "required": [
+        "gamemode",
+        "mangohud"
+      ]
+    },
+    "finding_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "findings": {
+      "type": "array"
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "absolute_paths_emitted",
+        "process_command_lines_collected",
+        "environment_values_collected",
+        "host_identifiers_collected",
+        "hardware_serials_collected",
+        "network_identifiers_collected",
+        "tokens_collected"
+      ]
+    }
+  }
+}
