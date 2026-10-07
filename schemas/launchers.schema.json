@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/launchers.schema.json",
+  "title": "Linux Gaming Doctor P10 Launcher Boundary Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "phase",
+    "read_only",
+    "heroic",
+    "lutris",
+    "tools",
+    "finding_count",
+    "findings",
+    "privacy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "phase": {
+      "const": "P10"
+    },
+    "read_only": {
+      "const": true
+    },
+    "heroic": {
+      "type": "object"
+    },
+    "lutris": {
+      "type": "object"
+    },
+    "tools": {
+      "type": "object"
+    },
+    "finding_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "findings": {
+      "type": "array"
+    },
+    "privacy": {
+      "type": "object"
+    }
+  }
+}

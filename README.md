@@ -175,3 +175,17 @@ P09 adds a read-only storage view:
 It classifies host and Steam-library filesystems, reduces mount options to safe capability flags,
 measures free space/inodes, separates game-data storage from compatdata storage, and records
 privacy-safe path-length metrics. It never creates a probe file, moves a prefix, or remounts a disk.
+
+## P10 — Launcher / Heroic / Lutris boundary map
+
+P10 adds a read-only non-Steam launcher view:
+
+```bash
+./bin/gaming-doctor launchers
+./bin/gaming-doctor launchers --json
+```
+
+It discovers Heroic and Lutris across native/Flatpak installs, checks privacy-safe installed/config
+semantics, validates configured absolute install/prefix/executable targets, distinguishes ELF from PE
+executables when locally resolvable, inventories UMU/Wine helpers, and watches Heroic log storage size.
+Configured-runner versus actually-executed-runner comparison remains reserved for session tracing.

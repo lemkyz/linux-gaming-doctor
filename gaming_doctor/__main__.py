@@ -13,14 +13,15 @@ from .performance import collect_performance_state, render_text as render_perfor
 from .audio import collect_audio_state, render_text as render_audio_text
 from .input import collect_input_state, render_text as render_input_text
 from .storage import collect_storage_state, render_text as render_storage_text
+from .launchers import collect_launcher_state, render_text as render_launcher_text
 
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="gaming-doctor",
-        description="Evidence-driven Linux gaming diagnostics. P09 remains read-only.",
+        description="Evidence-driven Linux gaming diagnostics. P10 remains read-only.",
     )
-    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P09)")
+    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P10)")
     sub = p.add_subparsers(dest="command")
 
     facts = sub.add_parser("facts", help="Collect the read-only system gaming baseline")
@@ -70,6 +71,12 @@ def parser() -> argparse.ArgumentParser:
         help="Inspect filesystem semantics, mount flags, free space and Steam library storage boundaries",
     )
     storage.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
+
+    launchers = sub.add_parser(
+        "launchers",
+        help="Inspect Heroic/Lutris installation, runner metadata, prefix/executable targets and helper tools",
+    )
+    launchers.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
     return p
 
 
@@ -114,6 +121,10 @@ def main() -> int:
     if args.command == "storage":
         report = collect_storage_state()
         print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) if args.json else render_storage_text(report), end="\n" if args.json else "")
+        return 0
+    if args.command == "launchers":
+        report = collect_launcher_state()
+        print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) if args.json else render_launcher_text(report), end="\n" if args.json else "")
         return 0
     p.error("unsupported command")
     return 2
