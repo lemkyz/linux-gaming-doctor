@@ -162,3 +162,16 @@ P08 adds a read-only controller/input view:
 It classifies event devices without emitting human-readable device names, checks gamepad event-node
 access, hidraw and uinput boundaries, Steam-named udev rules, `/run/udev/data` availability and
 device-scope batteries. Vendor/product IDs remain available for compatibility-rule matching.
+
+## P09 — Storage / filesystem diagnostic map
+
+P09 adds a read-only storage view:
+
+```bash
+./bin/gaming-doctor storage
+./bin/gaming-doctor storage --json
+```
+
+It classifies host and Steam-library filesystems, reduces mount options to safe capability flags,
+measures free space/inodes, separates game-data storage from compatdata storage, and records
+privacy-safe path-length metrics. It never creates a probe file, moves a prefix, or remounts a disk.
