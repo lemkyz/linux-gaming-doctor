@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/audio.schema.json",
+  "title": "Linux Gaming Doctor P07 Audio Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "phase",
+    "read_only",
+    "runtime",
+    "server",
+    "pipewire_settings",
+    "bluetooth",
+    "recent_events",
+    "finding_count",
+    "findings",
+    "privacy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "phase": {
+      "const": "P07"
+    },
+    "read_only": {
+      "const": true
+    },
+    "runtime": {
+      "type": "object"
+    },
+    "server": {
+      "type": "object"
+    },
+    "pipewire_settings": {
+      "type": "object"
+    },
+    "bluetooth": {
+      "type": "object"
+    },
+    "recent_events": {
+      "type": "object"
+    },
+    "finding_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "findings": {
+      "type": "array"
+    },
+    "privacy": {
+      "type": "object"
+    }
+  }
+}

@@ -135,3 +135,17 @@ P06 adds a read-only performance-state view:
 ```
 
 It records CPU frequency policy, boost state, load, Linux PSI pressure, memory/swap pressure, thermal-zone snapshots, laptop power state, NVIDIA utilization/temperature/clocks/power telemetry, and GameMode/MangoHud availability. P06 treats one-time utilization, governors and temperatures as evidence context rather than proof of a bottleneck; later timeline and differential phases correlate these signals with actual game frametime.
+
+## P07 — Audio diagnostic map
+
+P07 adds a read-only PipeWire/WirePlumber audio view:
+
+```bash
+./bin/gaming-doctor audio
+./bin/gaming-doctor audio --json
+```
+
+It records service/runtime health, sink/source availability, transport and sample-rate classes,
+Bluetooth profile context, PipeWire clock/quantum settings, and aggregate recent xrun evidence.
+Endpoint names, Bluetooth addresses, device descriptions and raw journal lines are deliberately
+excluded from reports.
