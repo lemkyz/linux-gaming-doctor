@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "pack_id": "resident-evil-3",
+  "match": {
+    "steam_appids": [
+      "952060"
+    ],
+    "name_aliases": [
+      "Resident Evil 3",
+      "BIOHAZARD RE:3"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0057",
+      "relation": "family"
+    },
+    {
+      "case_id": "LGD-0098",
+      "relation": "family"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "pack_id": "resident-evil-village",
+  "match": {
+    "steam_appids": [
+      "1196590"
+    ],
+    "name_aliases": [
+      "Resident Evil Village",
+      "BIOHAZARD VILLAGE"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0057",
+      "relation": "family"
+    },
+    {
+      "case_id": "LGD-0098",
+      "relation": "family"
+    }
+  ]
+}

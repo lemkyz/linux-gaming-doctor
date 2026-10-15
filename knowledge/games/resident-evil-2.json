@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "pack_id": "resident-evil-2",
+  "match": {
+    "steam_appids": [
+      "883710"
+    ],
+    "name_aliases": [
+      "Resident Evil 2",
+      "BIOHAZARD RE:2"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0057",
+      "relation": "family"
+    },
+    {
+      "case_id": "LGD-0098",
+      "relation": "family"
+    }
+  ]
+}

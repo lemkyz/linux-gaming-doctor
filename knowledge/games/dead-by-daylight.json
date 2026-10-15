@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "pack_id": "dead-by-daylight",
+  "match": {
+    "steam_appids": [
+      "381210"
+    ],
+    "name_aliases": [
+      "Dead by Daylight"
+    ]
+  },
+  "case_links": []
+}

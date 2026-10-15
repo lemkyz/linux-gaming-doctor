@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "pack_id": "resident-evil-4",
+  "match": {
+    "steam_appids": [
+      "2050650"
+    ],
+    "name_aliases": [
+      "Resident Evil 4",
+      "BIOHAZARD RE:4"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0057",
+      "relation": "family"
+    },
+    {
+      "case_id": "LGD-0098",
+      "relation": "family"
+    }
+  ]
+}

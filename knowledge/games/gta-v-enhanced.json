@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "pack_id": "gta-v-enhanced",
+  "match": {
+    "steam_appids": [
+      "3240220"
+    ],
+    "name_aliases": [
+      "Grand Theft Auto V Enhanced",
+      "Grand Theft Auto V Enhanced Edition"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0099",
+      "relation": "exact"
+    },
+    {
+      "case_id": "LGD-0017",
+      "relation": "diagnostic_boundary"
+    }
+  ]
+}

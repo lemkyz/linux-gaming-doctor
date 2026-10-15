@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "pack_id": "devil-may-cry-5",
+  "match": {
+    "steam_appids": [
+      "601150"
+    ],
+    "name_aliases": [
+      "Devil May Cry 5"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0057",
+      "relation": "family"
+    },
+    {
+      "case_id": "LGD-0098",
+      "relation": "family"
+    }
+  ]
+}

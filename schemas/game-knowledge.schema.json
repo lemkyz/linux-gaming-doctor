@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://linux-gaming-doctor.invalid/schemas/game-knowledge.schema.json",
+  "title": "Linux Gaming Doctor P11 Game Knowledge Report",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "phase",
+    "read_only",
+    "knowledge",
+    "finding_count",
+    "findings",
+    "policy",
+    "privacy"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "phase": {
+      "const": "P11"
+    },
+    "read_only": {
+      "const": true
+    },
+    "knowledge": {
+      "type": "object"
+    },
+    "finding_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "findings": {
+      "type": "array"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "privacy": {
+      "type": "object"
+    }
+  }
+}

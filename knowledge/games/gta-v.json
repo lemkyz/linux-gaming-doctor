@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "pack_id": "gta-v",
+  "match": {
+    "steam_appids": [
+      "271590"
+    ],
+    "name_aliases": [
+      "Grand Theft Auto V"
+    ]
+  },
+  "case_links": [
+    {
+      "case_id": "LGD-0017",
+      "relation": "exact"
+    }
+  ]
+}

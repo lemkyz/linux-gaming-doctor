@@ -189,3 +189,17 @@ It discovers Heroic and Lutris across native/Flatpak installs, checks privacy-sa
 semantics, validates configured absolute install/prefix/executable targets, distinguishes ELF from PE
 executables when locally resolvable, inventories UMU/Wine helpers, and watches Heroic log storage size.
 Configured-runner versus actually-executed-runner comparison remains reserved for session tracing.
+
+## P11 — Game knowledge engine
+
+P11 adds evidence-linked declarative game knowledge:
+
+```bash
+./bin/gaming-doctor knowledge
+./bin/gaming-doctor knowledge --appid 381210
+./bin/gaming-doctor knowledge --json
+```
+
+Game packs reference canonical corpus cases instead of copying their authority. A pack match is only a
+candidate: even exact confirmed knowledge still needs observed preconditions before diagnosis, and
+`REPORTED` / `UNCONFIRMED` cases can never authorize an automatic repair.

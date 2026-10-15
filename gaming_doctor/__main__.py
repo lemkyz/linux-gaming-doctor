@@ -14,14 +14,15 @@ from .audio import collect_audio_state, render_text as render_audio_text
 from .input import collect_input_state, render_text as render_input_text
 from .storage import collect_storage_state, render_text as render_storage_text
 from .launchers import collect_launcher_state, render_text as render_launcher_text
+from .knowledge import collect_knowledge_state, render_text as render_knowledge_text
 
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         prog="gaming-doctor",
-        description="Evidence-driven Linux gaming diagnostics. P10 remains read-only.",
+        description="Evidence-driven Linux gaming diagnostics. P11 remains read-only.",
     )
-    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P10)")
+    p.add_argument("--version", action="version", version=f"gaming-doctor {__version__} (P11)")
     sub = p.add_subparsers(dest="command")
 
     facts = sub.add_parser("facts", help="Collect the read-only system gaming baseline")
@@ -77,6 +78,13 @@ def parser() -> argparse.ArgumentParser:
         help="Inspect Heroic/Lutris installation, runner metadata, prefix/executable targets and helper tools",
     )
     launchers.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
+
+    knowledge = sub.add_parser(
+        "knowledge",
+        help="Match installed Steam games to evidence-linked game knowledge packs without diagnosing them",
+    )
+    knowledge.add_argument("--appid", help="Optional numeric Steam AppID to inspect")
+    knowledge.add_argument("--json", action="store_true", help="Emit machine-readable JSON")
     return p
 
 
@@ -125,6 +133,12 @@ def main() -> int:
     if args.command == "launchers":
         report = collect_launcher_state()
         print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) if args.json else render_launcher_text(report), end="\n" if args.json else "")
+        return 0
+    if args.command == "knowledge":
+        if args.appid is not None and not args.appid.isdigit():
+            p.error("--appid must contain digits only")
+        report = collect_knowledge_state(args.appid)
+        print(json.dumps(report, ensure_ascii=False, sort_keys=True, separators=(",", ":")) if args.json else render_knowledge_text(report), end="\n" if args.json else "")
         return 0
     p.error("unsupported command")
     return 2
